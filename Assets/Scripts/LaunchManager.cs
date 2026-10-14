@@ -11,6 +11,11 @@ public class LaunchManager : MonoBehaviourPunCallbacks
     public GameObject LobbyPanel;
     #region Unity Methods
     // Start is called before the first frame update
+    void Awake()
+    {
+        PhotonNetwork.AutomaticallySyncScene = true;
+    }
+
     void Start()
     {
         EnterGamePanel.SetActive(true);
@@ -23,6 +28,8 @@ public class LaunchManager : MonoBehaviourPunCallbacks
     {
         
     }
+
+
     #endregion
 
     #region Public Methods
@@ -62,6 +69,7 @@ public class LaunchManager : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom()
     {
         Debug.Log(PhotonNetwork.NickName + " joined to " + PhotonNetwork.CurrentRoom.Name);
+        PhotonNetwork.LoadLevel("GameScene");
     }
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {

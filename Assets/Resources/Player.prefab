@@ -520,12 +520,13 @@ GameObject:
   - component: {fileID: 8627149301815213516}
   - component: {fileID: 9106503661764342997}
   - component: {fileID: 12502244830877865}
+  - component: {fileID: 302478455169056404}
   - component: {fileID: -3433152623204283207}
   - component: {fileID: 5588442031894002623}
   - component: {fileID: 7486052806851372893}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -627,6 +628,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FPSCamera: {fileID: 9022828282735124089}
   fireRate: 0.1
+--- !u!114 &302478455169056404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6397839489559933470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b040600ae9018074da778e4ff414d212, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
 --- !u!114 &-3433152623204283207
 MonoBehaviour:
   m_ObjectHideFlags: 0

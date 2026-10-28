@@ -21,8 +21,10 @@ public class PixelGunGameManager : MonoBehaviourPunCallbacks
         else
             instance = this;
     }
-    void Start()
+    IEnumerator Start()
     {
+        yield return new WaitUntil(() => PhotonNetwork.InRoom);
+        
         if (PhotonNetwork.IsConnected)
         {
             if(playerPrefab != null)
@@ -36,7 +38,6 @@ public class PixelGunGameManager : MonoBehaviourPunCallbacks
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     public override void OnJoinedRoom()
